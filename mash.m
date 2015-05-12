@@ -1,4 +1,9 @@
+%Main code for compressing the photograph into a compressed photo
+%You can remove "fine" damage by subtracting a very compressed photo from the original this isolates the damage and then
+%subtracting this from the original gives you an improved photograph
 file = input('Please designate your jpeg file: ');
+
+%read photo into matrix
 L = imread(file);
 imshow(L);
 k=size(L);
@@ -6,6 +11,7 @@ m=k(1);
 n=k(2);
 h = input('How many eigenvalues will you use to reconstruct?: ');
 
+%break into colors
 red = L(:,:,1);
 green = L(:,:,2);
 blue = L(:,:,3);
@@ -19,7 +25,7 @@ doublegreen = doublegreen/256;
 doubleblue = double(blue);
 doubleblue = doubleblue/256;
 
-
+%Eigenvalue Extraction
 [u,s,v]=svd(doubleblue);
 U = u(:,1:h);
 V = v(:,1:h);
