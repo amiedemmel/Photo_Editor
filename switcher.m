@@ -1,4 +1,5 @@
 %switcher
+%Code for switching the columns of a matrix - not used in current technique, first rough attempt to simulate lost data
 
 A = input('matrix :');
 n = size(A);

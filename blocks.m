@@ -1,3 +1,9 @@
+%The job of this code is to break the photo into blocks and then detected any blocks that have extremem values
+%which might indicate damage
+
+%Amie Demmel
+%blocks.m
+
 %file = input('Please designate your jpeg file: ');
 L1 = input('Please input matrix to chop : ');
 tol = input('Input tolerance test for extreme value :');
